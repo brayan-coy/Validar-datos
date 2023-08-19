@@ -6,7 +6,7 @@ function redirigirAIndex() {
 
 function iniciarTimeout() {
   clearTimeout(timeoutID); // Reiniciar el timeout
-  timeoutID = setTimeout(redirigirAIndex, 30000); // Configurar timeout para redirigir después de 30 segundos
+  timeoutID = setTimeout(redirigirAIndex, 1800000); // Configurar timeout para redirigir después de 30 minutos (1800000 milisegundos)
 }
 
 document.addEventListener("DOMContentLoaded", function () {
