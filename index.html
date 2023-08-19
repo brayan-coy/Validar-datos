@@ -8,8 +8,13 @@
   <body>
     <div class="login-container">
       <h1>Iniciar Sesión</h1>
-      <label for="nombreUsuario">Nombre de usuario:</label>
-      <input type="text" id="nombreUsuario" placeholder="Nombre de usuario" />
+      <label for="usuarioSelector" class="seleccionar"
+        >Selecciona un usuario:</label
+      >
+      <select id="usuarioSelector" class="selector">
+        <option value="brayan">Brayan</option>
+        <option value="pepe">Pepe</option></select
+      ><br /><br /><br /><br />
       <label for="contrasena">Contraseña:</label>
       <input type="password" id="contrasena" placeholder="Contraseña" />
       <button id="ingresarButton">Ingresar</button>

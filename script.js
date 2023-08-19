@@ -19,11 +19,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function pedirDatos() {
-  var usuarioIngresado = document.getElementById("nombreUsuario").value;
+  var usuarioSeleccionado = document.getElementById("usuarioSelector").value;
   var contrasenaIngresada = document.getElementById("contrasena").value;
 
-  if (usuarioIngresado === "brayan" && contrasenaIngresada === "666") {
+  // Verifica las credenciales según el usuario seleccionado
+  if (usuarioSeleccionado === "brayan" && contrasenaIngresada === "666") {
     // Redirigir a otra página si el nombre de usuario y contraseña son correctos
+    window.location.href = "otrapagina.html";
+  } else if (usuarioSeleccionado === "pepe" && contrasenaIngresada === "777") {
+    // Redirigir a otra página si el nuevo usuario y contraseña son correctos
     window.location.href = "otrapagina.html";
   } else {
     alert("Datos incorrectos. Inténtalo nuevamente.");
