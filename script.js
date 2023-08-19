@@ -1,19 +1,26 @@
 var timeoutID;
+var tiempoInactividad = 30000; // 30 segundos de inactividad
 
 function recargarPagina() {
-  window.location.reload(); // Recargar la página actual
+  window.location.href = "index.html"; // Redirigir a index.html
 }
 
 function iniciarTimeout() {
-  clearTimeout(timeoutID); // Reiniciar el timeout
-  timeoutID = setTimeout(recargarPagina, 30000); // Configurar timeout para recargar después de 30 segundos
+  clearTimeout(timeoutID);
+  timeoutID = setTimeout(recargarPagina, tiempoInactividad);
 }
+
+// Reiniciar el timeout al detectar movimiento del mouse
+document.addEventListener("mousemove", function () {
+  iniciarTimeout();
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   document
     .getElementById("ingresarButton")
-    .addEventListener("click", function () {
-      iniciarTimeout(); // Reiniciar el timeout al hacer clic en el botón
+    .addEventListener("click", function (event) {
+      event.preventDefault();
+      iniciarTimeout();
       pedirDatos();
     });
 });
@@ -22,16 +29,13 @@ function pedirDatos() {
   var usuarioSeleccionado = document.getElementById("usuarioSelector").value;
   var contrasenaIngresada = document.getElementById("contrasena").value;
 
-  // Verifica las credenciales según el usuario seleccionado
   if (usuarioSeleccionado === "brayan" && contrasenaIngresada === "666") {
-    // Redirigir a otra página si el nombre de usuario y contraseña son correctos
     window.location.href = "otrapagina.html";
   } else if (usuarioSeleccionado === "pepe" && contrasenaIngresada === "777") {
-    // Redirigir a otra página si el nuevo usuario y contraseña son correctos
     window.location.href = "otrapagina.html";
   } else {
     alert("Datos incorrectos. Inténtalo nuevamente.");
-    iniciarTimeout(); // Reiniciar el timeout después de un intento fallido
+    iniciarTimeout();
   }
 }
 
