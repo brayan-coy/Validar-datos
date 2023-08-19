@@ -2,9 +2,17 @@
 <html>
   <head>
     <title>Página de Ingreso</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <button id="ingresarButton">Ingresar</button>
+    <div class="login-container">
+      <h1>Iniciar Sesión</h1>
+      <label for="nombreUsuario">Nombre de usuario:</label>
+      <input type="text" id="nombreUsuario" placeholder="Nombre de usuario" />
+      <label for="contrasena">Contraseña:</label>
+      <input type="password" id="contrasena" placeholder="Contraseña" />
+      <button id="ingresarButton">Ingresar</button>
+    </div>
   </body>
 </html>
