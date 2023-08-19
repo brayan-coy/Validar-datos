@@ -7,10 +7,12 @@ body {
   align-items: center;
   min-height: 100vh;
   background-color: #0056b3;
+  border: 2px solid black;
 }
 
 .iniciar {
   color: white;
+  margin-top: -45px;
 }
 
 .login-container {
@@ -18,8 +20,9 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 130px;
-  width: 120%; /* Cambiado a un ancho del 90% */
-  max-width: 500px; /* Máximo ancho para evitar que sea demasiado grande en pantallas grandes */
+  width: 100%; /* Cambiado a un ancho del 90% */
+  max-width: 450px; /* Máximo ancho para evitar que sea demasiado grande en pantallas grandes */
+  height: 400px;
   text-align: center;
   border: 3px solid red;
 }
@@ -70,6 +73,7 @@ body {
 .boton2 {
   font-size: 35px;
   background-color: white;
-  border: 3px solid red;
+  border: 2px solid red;
   color: black;
+  margin-top: 80px;
 }
